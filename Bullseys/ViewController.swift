@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         randNum = Int(arc4random_uniform(101))
         numLabel.text = "Move slider to \(randNum)"
+        numSlider.setValue(50.0, animated: false)
     }
 
     
