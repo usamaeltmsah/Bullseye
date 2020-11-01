@@ -30,17 +30,21 @@ class ViewController: UIViewController {
         if exactSwitch.isOn == false {
             if Int(numSlider.value) >= randNum-3 && Int(numSlider.value) <= randNum+3 {
                 resultValue.text = "That's right!"
+                resultValue.backgroundColor = UIColor.green
             }
             else{
                 resultValue.text = "Sorry you missed it :("
+                resultValue.backgroundColor = UIColor.red
             }
         }
         else
         {
             if randNum == Int(numSlider.value){
                 resultValue.text = "That's right!"
+                resultValue.backgroundColor = UIColor.green
             }
             else{
+                resultValue.backgroundColor = UIColor.red
                 resultValue.text = "Sorry you missed it :("
             }
 
