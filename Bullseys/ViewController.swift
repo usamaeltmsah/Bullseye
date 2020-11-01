@@ -11,7 +11,9 @@ class ViewController: UIViewController {
 
     var counter = 0
     @IBOutlet weak var numLabel: UILabel!
-        
+    
+    @IBOutlet weak var numSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,6 +22,10 @@ class ViewController: UIViewController {
     @IBAction func increase(_ sender: Any) {
         counter += 1
         numLabel.text = "\(counter)"
+    }
+    
+    @IBAction func sliderValueChanged(_ sender: Any) {
+        print(numSlider.value)
     }
 }
 
