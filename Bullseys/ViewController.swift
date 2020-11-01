@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var numSlider: UISlider!
     
+    @IBOutlet weak var exactSwitch: UISwitch!
     @IBOutlet weak var resultValue: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,24 @@ class ViewController: UIViewController {
 
     
     @IBAction func checkValue(_ sender: Any) {
-        if randNum == Int(numSlider.value){
-            resultValue.text = "That's right!"
+        
+        if exactSwitch.isOn == false {
+            if Int(numSlider.value) >= randNum-3 && Int(numSlider.value) <= randNum+3 {
+                resultValue.text = "That's right!"
+            }
+            else{
+                resultValue.text = "Sorry you missed it :("
+            }
         }
-        else{
-            resultValue.text = "Sorry you missed it :("
+        else
+        {
+            if randNum == Int(numSlider.value){
+                resultValue.text = "That's right!"
+            }
+            else{
+                resultValue.text = "Sorry you missed it :("
+            }
+
         }
     }
     
