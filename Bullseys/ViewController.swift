@@ -6,17 +6,20 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
 
     var counter = 0
+    var randNum = 0
     @IBOutlet weak var numLabel: UILabel!
     
     @IBOutlet weak var numSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        randNum = Int(arc4random_uniform(101))
+        numLabel.text = "Move slider to \(randNum)"
     }
 
     @IBAction func increase(_ sender: Any) {
@@ -25,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderValueChanged(_ sender: Any) {
-        print(numSlider.value)
+        numLabel.text = "\(round(numSlider.value))"
     }
 }
 

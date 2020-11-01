@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwu-Rg-ftf">
-                                <rect key="frame" x="189.5" y="414.5" width="35" height="67"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="56"/>
+                                <rect key="frame" x="10" y="436" width="394" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeP-QG-nB3">
-                                <rect key="frame" x="157.5" y="531.5" width="99" height="45"/>
+                                <rect key="frame" x="157.5" y="510" width="99" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Increase">
                                     <color key="titleShadowColor" red="0.83921568629999999" green="0.18823529410000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,8 +32,8 @@
                                     <action selector="increase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fjG-Wb-Yiq"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qyy-FI-KXa">
-                                <rect key="frame" x="18" y="511.5" width="378" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="50" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Qyy-FI-KXa">
+                                <rect key="frame" x="18" y="490" width="378" height="31"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VBy-IW-7V8"/>
                                 </connections>
@@ -44,8 +44,10 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qyy-FI-KXa" secondAttribute="trailing" constant="20" id="3vx-D9-jwb"/>
                             <constraint firstItem="xeP-QG-nB3" firstAttribute="top" secondItem="kwu-Rg-ftf" secondAttribute="bottom" constant="50" id="5gV-um-Ydg"/>
+                            <constraint firstItem="kwu-Rg-ftf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="B9v-xb-Opv"/>
                             <constraint firstItem="Qyy-FI-KXa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D1F-uc-aWK"/>
                             <constraint firstItem="kwu-Rg-ftf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YzK-ZD-yrx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kwu-Rg-ftf" secondAttribute="trailing" constant="10" id="cR7-dm-oaq"/>
                             <constraint firstItem="kwu-Rg-ftf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hfq-1f-ANO"/>
                             <constraint firstItem="Qyy-FI-KXa" firstAttribute="top" secondItem="kwu-Rg-ftf" secondAttribute="bottom" constant="30" id="rSA-d5-Pqv"/>
                             <constraint firstItem="xeP-QG-nB3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="reB-mb-qy1"/>
