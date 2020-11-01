@@ -10,25 +10,30 @@ import Foundation
 
 class ViewController: UIViewController {
 
-    var counter = 0
     var randNum = 0
     @IBOutlet weak var numLabel: UILabel!
     
     @IBOutlet weak var numSlider: UISlider!
     
+    @IBOutlet weak var resultValue: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         randNum = Int(arc4random_uniform(101))
         numLabel.text = "Move slider to \(randNum)"
     }
 
-    @IBAction func increase(_ sender: Any) {
-        counter += 1
-        numLabel.text = "\(counter)"
+    
+    @IBAction func checkValue(_ sender: Any) {
+        if randNum == Int(numSlider.value){
+            resultValue.text = "That's right!"
+        }
+        else{
+            resultValue.text = "Sorry you missed it :("
+        }
     }
     
     @IBAction func sliderValueChanged(_ sender: Any) {
-        numLabel.text = "\(round(numSlider.value))"
+        
     }
 }
 
