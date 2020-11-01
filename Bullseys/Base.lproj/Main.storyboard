@@ -38,7 +38,7 @@
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VBy-IW-7V8"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8s-Me-e8y">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8s-Me-e8y">
                                 <rect key="frame" x="10" y="585" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -53,6 +53,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0D-p8-HL6">
+                                <rect key="frame" x="323" y="94" width="76" height="30"/>
+                                <state key="normal" title="Play Again!"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hap-bu-OOz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,12 +70,14 @@
                             <constraint firstItem="Qyy-FI-KXa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D1F-uc-aWK"/>
                             <constraint firstItem="a8s-Me-e8y" firstAttribute="top" secondItem="xeP-QG-nB3" secondAttribute="bottom" constant="30" id="Ffp-o1-s06"/>
                             <constraint firstItem="q7K-JK-lhy" firstAttribute="top" secondItem="X0g-Fw-Lup" secondAttribute="bottom" constant="10" id="OPs-Cc-dox"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P0D-p8-HL6" secondAttribute="trailing" constant="15" id="Q9Q-k6-I8H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q7K-JK-lhy" secondAttribute="bottom" constant="20" id="Ww5-BO-MhW"/>
                             <constraint firstItem="kwu-Rg-ftf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YzK-ZD-yrx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kwu-Rg-ftf" secondAttribute="trailing" constant="10" id="cR7-dm-oaq"/>
                             <constraint firstItem="a8s-Me-e8y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fLs-T8-g42"/>
                             <constraint firstItem="X0g-Fw-Lup" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fnk-s5-zOi"/>
                             <constraint firstItem="kwu-Rg-ftf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hfq-1f-ANO"/>
+                            <constraint firstItem="P0D-p8-HL6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="rOC-aC-7w9"/>
                             <constraint firstItem="Qyy-FI-KXa" firstAttribute="top" secondItem="kwu-Rg-ftf" secondAttribute="bottom" constant="30" id="rSA-d5-Pqv"/>
                             <constraint firstItem="xeP-QG-nB3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="reB-mb-qy1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a8s-Me-e8y" secondAttribute="trailing" constant="10" id="sOn-BW-oZh"/>
@@ -78,6 +87,7 @@
                         <outlet property="exactSwitch" destination="q7K-JK-lhy" id="ZHA-o0-LXX"/>
                         <outlet property="numLabel" destination="kwu-Rg-ftf" id="3Ho-Kp-tCI"/>
                         <outlet property="numSlider" destination="Qyy-FI-KXa" id="N5E-dg-BLM"/>
+                        <outlet property="playAgainButton" destination="P0D-p8-HL6" id="JMs-9A-WYw"/>
                         <outlet property="resultValue" destination="a8s-Me-e8y" id="U2c-TT-c7x"/>
                     </connections>
                 </viewController>

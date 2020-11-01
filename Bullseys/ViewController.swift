@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var numSlider: UISlider!
     
     @IBOutlet weak var exactSwitch: UISwitch!
+    @IBOutlet weak var playAgainButton: UIButton!
     @IBOutlet weak var resultValue: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,10 +45,19 @@ class ViewController: UIViewController {
             }
 
         }
+        resultValue.isHidden = false
+        playAgainButton.isHidden = false
     }
     
     @IBAction func sliderValueChanged(_ sender: Any) {
         
+    }
+    @IBAction func playAgain(_ sender: Any) {
+        numSlider.setValue(50.0, animated: false)
+        randNum = Int(arc4random_uniform(101))
+        numLabel.text = "Move slider to \(randNum)"
+        resultValue.isHidden = true
+        playAgainButton.isHidden = true
     }
 }
 
